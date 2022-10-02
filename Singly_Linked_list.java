@@ -2,15 +2,16 @@ package L1;
 /**
  * @Abdulrahman
  */
-public class Linked_list <T>{
+public class Singly_Linked_list <T>{
     
 Node head ;
 Node tail ;
 int len = 0;// List length
 
-public Linked_list(){}
+public Singly_Linked_list(){}
 
-public Linked_list(T value) {
+public Singly_Linked_list(T value) {
+    
  Node temp = new Node(value); 
      temp.next = null ; 
      head = tail = temp;
@@ -196,5 +197,4 @@ System.out.println("Element: "+current.value);
 }
   
   
-
 }
