@@ -1,11 +1,11 @@
-package aads_1;
+package L1;
 /**
  * @Abdulrahman
  */
 public class Linked_list <T>{
     
-Node head ;//Frist
-Node tail ;//End 
+Node head ;
+Node tail ;
 int len = 0;// List length
 
 public Linked_list(){}
@@ -25,6 +25,7 @@ public boolean Is_empty(){
 
 
 //Add Methods
+    
 public void add_frist(T value){//Before head  
      Node temp = new Node(value); 
      
@@ -37,6 +38,9 @@ public void add_frist(T value){//Before head
       }
   } 
 
+    
+    
+    
 public void add_last(T value){ // After tail
      Node temp = new Node(value); 
      temp.next = null ; 
@@ -51,6 +55,11 @@ public void add_last(T value){ // After tail
  }
        len++;
 }
+    
+    
+    
+    
+    
 public void AddAfter(T insertAfter, T value) {
     Node newNode = new Node(value);
     Node current = head;
@@ -75,6 +84,7 @@ public void AddAfter(T insertAfter, T value) {
 
 
 //Delete Methods 
+    
   public void Delete_frist(){
       if(Is_empty()){  
     System.out.println("Not Deleted, Linked List is empty");
@@ -86,6 +96,8 @@ public void AddAfter(T insertAfter, T value) {
       }
   }
   
+    
+    
  public void Delete_Last(){
      
      if(Is_empty()){  
@@ -104,9 +116,11 @@ len--;
      
 }
  
+    
+    
  public void deleteT(T target){
-  
-       if (Is_empty()){
+       
+     if (Is_empty()){
        System.out.println("Linked list is empty :("); 
     
         } else {  
@@ -132,7 +146,7 @@ len--;
      prev.next = current.next;
        
 System.out.println("Deleted Successfully! ("+current.value+")"); 
-current = prev =null;
+current = prev = null;
 len--;    
  }
     
@@ -145,6 +159,7 @@ return len;
 } 
 
 
+    
   public void display() {
     
       System.out.print("[ ");
@@ -156,6 +171,7 @@ return len;
 } 
   
   
+    
 public void displayPreSucc(T value) { 
 Node current = head; 
 Node s = null;
@@ -179,64 +195,6 @@ else
 System.out.println("Element: "+current.value);
 }
   
-  
-
-
-
-public void union(Linked_list set2) { 
-
-if (set2.head == null) { 
-display();
-return;
-}
-if (head == null) { 
-set2.display(); 
-return;
-}
-
-Node current = head;
-while (current.next != null) { 
-current = current.next;
-}
-current.next = set2.head;
-
-Node ptr1 = null, ptr2 = null, dup = null; 
-ptr1 = head;
-
-while (ptr1 != null && ptr1.next != null) { 
-ptr2 = ptr1;
-
-while (ptr2.next != null) {
-
-if (ptr1.value == ptr2.next.value) {
-
-dup = ptr2.next;
-ptr2.next = ptr2.next.next; 
-System.gc();
-} else{ 
-ptr2 = ptr2.next;
-}
-}
-ptr1 = ptr1.next;
-}
-display();
-
-}
-
-
-void intersection(Linked_list set2) { 
-Node set1Cur;
-Node set2Cur;
-Linked_list addset = new Linked_list();
-for (set1Cur = head; set1Cur != null; set1Cur = set1Cur.next) { 
-for (set2Cur = set2.head; set2Cur != null; set2Cur = set2Cur.next) 
-if (set1Cur.value == set2Cur.value) { 
-addset.add_frist(set1Cur.value);
-}
-}
-addset.display();
-
-}
   
 
 }
