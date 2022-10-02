@@ -26,6 +26,16 @@ L1.displayPreSucc("one");
 System.out.println("----------------------------");
 L1.display();
 
+/*
+output:
+
+Deleted Successfully! (five)
+predecessor: half , Element: one , Successor: two
+----------------------------
+[ ~ [ Zero ] ~~ [ half ] ~~ [ one ] ~~ [ two ] ~~ [ three ] ~~ [ four ] ~ ]
+ Length: 6 
+
+*/  
 
 }    
 }
