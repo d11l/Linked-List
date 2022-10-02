@@ -4,10 +4,10 @@ package L1;
  * @Abdulrahman
  */
 
-public class Test {
+public class Test_Singly_Linked_list {
 public static void main(String[] args) {
 
-Linked_list L1 =new Linked_list("two");
+Singly_Linked_list L1 =new Singly_Linked_list("two");
 
 
 L1.add_last("three");    
