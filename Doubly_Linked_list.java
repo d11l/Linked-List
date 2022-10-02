@@ -1,5 +1,8 @@
 package L2;
 
+/**
+ * @Abdulrahman
+ */
 
 public class Doubly_Linked_list <T>{    
 
@@ -91,7 +94,7 @@ public void add_frist(T value){// Before head
          DNode current = head;  
           System.out.println("Deleted Successfully! ("+head.value+")");    
          head = current.next; 
-         current = null;
+         head.prevous = null;
          len--;
         }
    }
