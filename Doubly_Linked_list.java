@@ -39,10 +39,8 @@ public void add_frist(T value){// Before head
   
         DNode newNode = new DNode(value);  
 
-        if(head == null) {  
+        if(Is_empty()){  
             head = tail = newNode;  
-           
-            head.prevous = tail.next = null;  
         }  
         else{  
             tail.next = newNode;   
@@ -59,9 +57,9 @@ public void add_frist(T value){// Before head
     DNode newNode = new DNode(value);
     DNode current = head;
     
-    if(head == null) {
-        head = newNode;
-    }
+    if(Is_empty()){  
+            head = tail = newNode;  
+        }  
     else {
         while(current != null && !current.value.equals(insertAfter)) {
             
