@@ -80,8 +80,24 @@ public void add_frist(T value){// Before head
  
    } 
  
+   public void addArr_L(T[] s){//Add array Last
    
+       for(int i =0;i<s.length;i++){
+           add_last(s[i]);
+       }
+   }
    
+    public void addArr_F(T[] s){//Add array Frist
+  
+      for(int i =s.length-1;i>-1;i--){
+           add_frist(s[i]);
+       }
+   
+   }
+ 
+   
+ 
+ 
    //Delete Methods 
    public void Delete_frist(){
    
@@ -90,7 +106,7 @@ public void add_frist(T value){// Before head
       
         }else{   
          DNode current = head;  
-          System.out.println("Deleted Successfully! ("+head.value+")");    
+         System.out.println("Deleted Successfully! ("+head.value+")");    
          head = current.next; 
          head.prevous = null;
          len--;
