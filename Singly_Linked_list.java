@@ -13,7 +13,6 @@ public Singly_Linked_list(){}
 public Singly_Linked_list(T value) {
     
  Node temp = new Node(value); 
-     temp.next = null ; 
      head = tail = temp;
  len++;
  
@@ -44,8 +43,6 @@ public void add_frist(T value){//Before head
     
 public void add_last(T value){ // After tail
      Node temp = new Node(value); 
-     temp.next = null ; 
-
      
      if(Is_empty()){ 
      head = tail = temp;
